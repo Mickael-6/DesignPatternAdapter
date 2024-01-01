@@ -1,50 +1,39 @@
-<?php class Deck {
- public $card1;
- public $card2;
- public $value1;
- public $value2;
-
- function __construct($card1,$card2,$value1,$value2)
- {
-     $this->card1 = $card1;
-     $this->card2 = $card2;
-     $this->value1 = $value1;
-     $this->value2 = $value2;
+<?php
+namespace App\Entity;
+class Deck{
+    public function flip() {
+    $randomCard = (rand(1,13));
+    if ($randomCard === 1) {
+        
+    echo "Vous tirez une carte : As de" ;
    
- } 
- public function card1(){
-    return $this->card1;
- }
- public function card2(){
-    return $this->card2;
- }
-
- public function value1(){
-    return $this->value1;
- }
- public function value2(){
-    return $this->value2;
- }
-
-    
-  }
-
-$deck = new Deck(1,12,1,4);
-$randomcard = (rand($deck->card1(),$deck->card2()));
-$randomtype = (rand($deck->value1(),$deck->value2()));
-echo  $randomcard;
-    if ($randomtype === 1) {
-        echo "coeur";
+    }elseif($randomCard === 11){
+        echo "Vous tirez une carte : Vallet de";
+    }elseif($randomCard === 12){
+        echo "Vous tirez une carte : Reine de";
+    }elseif($randomCard === 13){
+        echo "Vous tirez une carte : Roi de";
+    }else{
+    echo "Vous tirez une carte : " . $randomCard ;}
+ 
+ 
+    $randomType = (rand(1,4));
+     
+    if ($randomType === 1) {
+        echo " coeur"."\n";
     }
-    if ($randomtype === 2) {
-        echo "pique";
+    if ($randomType === 2) {
+        echo " pique"."\n";
     }
-    if ($randomtype === 3) {
-        echo "carreau";
+    if ($randomType === 3) {
+        echo " carreau"."\n";
     }
-    if ($randomtype === 4) {
-        echo "trèfle";
+    if ($randomType === 4) {
+        echo " trèfle"."\n";
     }
 
-
+      }
+}
+// $deck = new Deck();
+// $deck->flip();
 ?>

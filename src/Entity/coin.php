@@ -1,5 +1,5 @@
 <?php 
-
+namespace App\Entity;
 class Coin {
     public $pile;
     public $face;

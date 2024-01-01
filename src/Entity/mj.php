@@ -1,4 +1,5 @@
 <?php 
+namespace App\Entity;
 
 class Mj {
    public $name;
@@ -13,11 +14,8 @@ public function name(){
 }
 }
 
-$read="";
-while (($read === "")) {
-    $read  = readline("entrez Le nom du MJ : ");
-}
-$mj = New MJ($read);
-echo $read;
+
+// $mj = New MJ("Mickael");
+// echo $mj->name();
 
 ?>

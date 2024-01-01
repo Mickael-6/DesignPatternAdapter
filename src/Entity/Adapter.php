@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Entity;
 
 interface Adapter {
     public function flip();
@@ -57,12 +57,12 @@ class DeckDiceAdapter implements Adapter {
  }
 }
 
-$deck = new Deck();
-$deckCoinAdapter = new DeckCoinAdapter();
-$deckDiceAdapter = new DeckDiceAdapter();
-$deck->flip();
-$deckCoinAdapter->flip();
-$deckDiceAdapter->flip();
+//  $deck = new Deck();
+//  $deckCoinAdapter = new DeckCoinAdapter();
+//  $deckDiceAdapter = new DeckDiceAdapter();
+//  $deck->flip();
+//  $deckCoinAdapter->flip();
+//  $deckDiceAdapter->flip();
 
 
 ?>
